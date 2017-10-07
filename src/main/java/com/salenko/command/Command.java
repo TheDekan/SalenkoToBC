@@ -9,7 +9,7 @@ import com.salenko.service.BookService;
 public interface Command {
 
 	void execute();
-	
+
 	boolean validate();
 
 	public static void callHelp() {

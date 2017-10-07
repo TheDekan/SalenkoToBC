@@ -2,9 +2,7 @@ package com.salenko.command;
 
 public class HelpCommand implements Command {
 
-	String row = "";
-
-	//public HelpCommand() {}
+	String row;
 
 	public HelpCommand(String input) {
 		this.row = input;

@@ -5,8 +5,6 @@ public class QuitCommand implements Command {
 	String row;
 	boolean[] doWork;
 
-	// public QuitCommand() {}
-
 	public QuitCommand(String input, boolean[] doWork) {
 		this.row = input;
 		this.doWork = doWork;

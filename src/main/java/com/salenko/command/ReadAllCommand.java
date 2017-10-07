@@ -11,12 +11,6 @@ public class ReadAllCommand implements Command {
 
 	AnnotationConfigApplicationContext context;
 	String row;
-
-	/*
-	ReadAllCommand(AnnotationConfigApplicationContext context) {
-		this.context = context;
-	}
-	*/
 	
 	public ReadAllCommand(AnnotationConfigApplicationContext context, String input) {
 		this.context = context;

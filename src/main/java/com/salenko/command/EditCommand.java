@@ -16,7 +16,7 @@ public class EditCommand implements Command {
 	Scanner scanner;
 	String row;
 
-	public EditCommand(String[] rowFields, Book book, AnnotationConfigApplicationContext context, Scanner scanner,	String row) {
+	public EditCommand(String[] rowFields, Book book, AnnotationConfigApplicationContext context, Scanner scanner, String row) {
 		this.rowFields = rowFields;
 		this.book = book;
 		this.context = context;
@@ -26,7 +26,7 @@ public class EditCommand implements Command {
 
 	@Override
 	public void execute() {
-		if (validate()){
+		if (validate()) {
 			book.setName(rowFields[0]);
 			List<Book> books = ((BookService) context.getBean("service")).findAllByName(book.getName());
 			for (int i = 0; i < books.size(); i++) {

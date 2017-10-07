@@ -1,10 +1,10 @@
 package com.salenko.command;
 
-public class UnknownCommand implements Command{
+public class UnknownCommand implements Command {
 
 	@Override
 	public void execute() {
-		System.out.println("Unknown command. For help type help.");		
+		System.out.println("Unknown command. For help type help.");
 	}
 
 	@Override

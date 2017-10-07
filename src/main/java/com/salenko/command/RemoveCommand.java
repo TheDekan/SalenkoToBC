@@ -16,8 +16,7 @@ public class RemoveCommand implements Command {
 	Scanner scanner;
 	String row;
 
-	public RemoveCommand(String[] rowFields, Book book, AnnotationConfigApplicationContext context, Scanner scanner,
-			String row) {
+	public RemoveCommand(String[] rowFields, Book book, AnnotationConfigApplicationContext context, Scanner scanner, String row) {
 		this.rowFields = rowFields;
 		this.book = book;
 		this.context = context;
@@ -27,7 +26,7 @@ public class RemoveCommand implements Command {
 
 	@Override
 	public void execute() {
-		if (validate()){
+		if (validate()) {
 			book.setName(rowFields[0]);
 			List<Book> books = ((BookService) context.getBean("service")).findAllByName(book.getName());
 			for (int i = 0; i < books.size(); i++) {
