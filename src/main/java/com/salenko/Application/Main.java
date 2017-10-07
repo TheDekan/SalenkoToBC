@@ -4,8 +4,9 @@ import java.util.Scanner;
 
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 
+import com.salenko.command.Command;
 import com.salenko.configuration.HibernateConfiguration;
-import com.salenko.utils.Executor;
+import com.salenko.utils.CommandFactory;
 
 public class Main {
 
@@ -20,8 +21,9 @@ public class Main {
             while (workOn[0]) {
                 System.out.println("Please, enter the command:");
                 
-                Executor executor = new Executor();
-                executor.execute(context, workOn, in);
+                CommandFactory executor = new CommandFactory();
+                Command com = executor.getCommand(context, workOn, in);
+                com.execute();
                 
                 System.out.println();
             }

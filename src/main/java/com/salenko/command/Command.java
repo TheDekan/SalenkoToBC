@@ -1,16 +1,16 @@
 package com.salenko.command;
 
 import java.util.List;
-import java.util.Scanner;
-
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 
 import com.salenko.model.Book;
 import com.salenko.service.BookService;
 
-public abstract class Command {
+public interface Command {
 
-	public abstract void doWork(String[] rowFields, Book book, AnnotationConfigApplicationContext context, Scanner scanner);
+	void execute();
+	
+	boolean validate();
 
 	public static void callHelp() {
 		System.out.println("Available commands: add, edit, remove, all, quit.");
