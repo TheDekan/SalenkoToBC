@@ -65,7 +65,7 @@
 					<version>${version.plugin.war}</version>
 					<configuration>
 						<failOnMissingWebXml>false</failOnMissingWebXml>
-						<warName>SalenkoToQMTestProj</warName>
+						<warName>SalenkoToBC</warName>
 					</configuration>
 				</plugin>
 
