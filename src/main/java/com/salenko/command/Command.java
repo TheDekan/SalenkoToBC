@@ -10,7 +10,6 @@ public interface Command {
 
 	void execute();
 
-	boolean validate();
-	
+	boolean validate();	
 	
 }
